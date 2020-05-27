@@ -7,7 +7,10 @@
             class="btn btn-success"
             [disabled]="!recipeForm.valid"
             type="submit">Save</button>
-          <button class="btn btn-danger" type="button">Cancel</button>
+          <button 
+            class="btn btn-danger" 
+            type="button"
+            (click)="onCancel()">Cancel</button>
         </div>
       </div>
       <div class="row">
@@ -31,14 +34,15 @@
               class="form-control"
               type="text"
               id="name"
-              formControlName="imagePath">
+              formControlName="imagePath"
+              #imagePath>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-xs-12">
-          <img class="img-responsive" src="">
+          <img class="img-responsive" [src]="imagePath.value">
         </div>
       </div>
 
@@ -76,7 +80,10 @@
               formControlName="amount">
             </div>
             <div class="col-xs-2">
-              <button class="btn btn-danger" type="button">X</button>
+              <button 
+                class="btn btn-danger" 
+                type="button"
+                (click)="onDeleteIngredient(i)">X</button>
             </div>
           </div>
           <hr>
