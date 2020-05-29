@@ -21,6 +21,10 @@
       "app",
       "kebab-case"
     ],
+    "curly": [
+      true, 
+      "ignore-same-line"
+    ],
     "import-blacklist": [
       true,
       "rxjs/Rx"
