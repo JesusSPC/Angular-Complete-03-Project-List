@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DataStorageService } from '../shared/data-storage.service';
 import { AuthService } from '../auth/auth.service';
 import { Subscription } from 'rxjs';
-import { User } from '../auth/user.model';
 
 @Component({
   selector: 'pro-header',
@@ -19,11 +18,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.userSub = this.authService.user
-      .subscribe(user => {
-        this.isAuthenticated = !!user;
-        console.log(!user);
-        console.log(!!user);
-      })
+      .subscribe(user => this.isAuthenticated = !!user);
   }
 
   onSaveData() {
