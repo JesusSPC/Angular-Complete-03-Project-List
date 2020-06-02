@@ -12,9 +12,6 @@ import { RouterModule } from '@angular/router';
     ShoppingEditComponent
   ],
   imports: [SharedModule, FormsModule, RouterModule, ShoppingListRoutingModule],
-  exports: [
-    // ShoppingEditComponent
-  ]
 })
 export class ShoppingListModule {
 

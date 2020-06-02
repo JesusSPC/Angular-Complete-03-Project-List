@@ -17,7 +17,7 @@ import { AuthInterceptorService } from './auth/auth-interceptor.service';
     RecipesResolverService,
     AuthService,
     AuthGuard,
-    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true},
   ],
 })
 export class CoreModule {}
